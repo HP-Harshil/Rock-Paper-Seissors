@@ -1,5 +1,3 @@
-console.log("Hello")
-
 function getComputerChoise() {
     let i
     i = Math.floor(Math.random()*3)
@@ -15,6 +13,9 @@ function getComputerChoise() {
 
     return x
 }
+
+const playerSelection = "rock"
+let computerSelection
 
 function playRound(playerSelection, computerSelection){
 
@@ -44,6 +45,14 @@ function playRound(playerSelection, computerSelection){
 
 }
 
-const playerSelection = "rock"
-const computerSelection = getComputerChoise()
-console.log(playRound(playerSelection, computerSelection))
+console.log(playRound(playerSelection, computerSelection = getComputerChoise()))
+
+let numberOfRounds = 5
+
+function game(numberOfRounds) {
+    for (let i = 0; i < numberOfRounds; i++) {
+        console.log(playRound(playerSelection, computerSelection = getComputerChoise()))
+    }
+}
+
+console.log(game(numberOfRounds))
