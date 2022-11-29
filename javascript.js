@@ -1,3 +1,5 @@
+let playerSelection = prompt()
+
 function getComputerChoise() {
     let i
     i = Math.floor(Math.random()*3)
@@ -14,7 +16,6 @@ function getComputerChoise() {
     return x
 }
 
-const playerSelection = "rock"
 let computerSelection
 
 function playRound(playerSelection, computerSelection){
